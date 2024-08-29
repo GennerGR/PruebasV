@@ -11,7 +11,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextForegroundStyle.Unspecified.color
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -28,31 +27,7 @@ import pruebasv.composeapp.generated.resources.compose_multiplatform
 @Preview
 fun App() {
     MaterialTheme {
-        Navigator(screen = MainScreen()) {navigator: Navigator ->  
-            SlideTransition(navigator)
-        }
+
     }
 }
-
-class MainScreen:Screen {
-
-    @Composable
-    override fun Content() {
-        val navigator = LocalNavigator.currentOrThrow
-        Column (modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally){
-            Button( onClick = {
-                navigator.push(SecondScreen()) // Crear Segunda Pantalla
-            }) {
-                Text("Navegación Básica", fontSize = 22.sp, color = Color.White)
-            }
-            Button( onClick = {
-                navigator.push(BottomBar()) // Crear pantalla BottomBar
-            }) {
-                Text("BottomBar", fontSize = 22.sp, color = Color.White)
-            }
-        }
-    }
-}
-
-
 
