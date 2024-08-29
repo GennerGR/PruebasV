@@ -24,11 +24,14 @@ class SecondScreen : Screen {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Spacer(modifier = Modifier.weight(1f))
-            Text("SecondScreen", fontSize = 24.sp, color = Color.White)
-            Spacer(modifier = Modifier.weight(1f))
-            Button(onClick = { navigator.pop() }) { Text("Back") }
-            Spacer(modifier = Modifier.weight(0.5f))
 
+            Text("SecondScreen", fontSize = 24.sp, color = Color.White)
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Button(onClick = { navigator.pop() }) { Text("Back") }
+
+            Spacer(modifier = Modifier.weight(0.5f))
         }
     }
 }
