@@ -43,7 +43,7 @@ class BottomBarScreen : Screen {
                                     contentDescription = null
                                 )
                             },
-                            onClick ={tabNavigator.current = HomeTab}
+                            onClick = { tabNavigator.current = HomeTab }
                         )
 
                         BottomNavigationItem(
@@ -55,23 +55,23 @@ class BottomBarScreen : Screen {
                                     contentDescription = null
                                 )
                             },
-                            onClick = {tabNavigator.current = FavTab}
+                            onClick = { tabNavigator.current = FavTab }
                         )
 
                         BottomNavigationItem(
                             selected = tabNavigator.current.key == ProfileTab.key,
-                            label = {Text(it.current.options.title)},
+                            label = { Text(it.current.options.title) },
                             icon = {
                                 Icon(
                                     painter = ProfileTab.options.icon!!,
                                     contentDescription = null
                                 )
                             },
-                            onClick = {tabNavigator.current = ProfileTab}
+                            onClick = { tabNavigator.current = ProfileTab }
                         )
                     }
-                } , content = {
-                        CurrentTab()
+                }, content = {
+                    CurrentTab()
                 }
             )
         }
