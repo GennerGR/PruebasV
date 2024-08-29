@@ -18,6 +18,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.transitions.SlideTransition
+import com.gnr.pruebasv.BottomBar.BottomBarScreen
 import com.gnr.pruebasv.secondScreen.SecondScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -43,7 +44,7 @@ class MainScreen : Screen {
             }
             Spacer(Modifier.height(16.dp))
             Button(onClick = {
-                // agg BottomBarScreen
+                navigator.push(BottomBarScreen())// agg BottomBarScreen
             }) {
                 Text("BottomBarScreen", fontSize = 22.sp, color = Color.White)
             }
