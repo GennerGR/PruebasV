@@ -18,6 +18,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.transitions.SlideTransition
+import com.gnr.pruebasv.secondScreen.SecondScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -36,13 +37,13 @@ class MainScreen : Screen {
         val navigator = LocalNavigator.currentOrThrow
         Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             Button(onClick = {
-                navigator.push(  ()) // agg SecondScreen
+                navigator.push(SecondScreen()) // agg SecondScreen
             }) {
                 Text("SecondScreen", fontSize = 22.sp, color = Color.White)
             }
             Spacer(Modifier.height(16.dp))
             Button(onClick = {
-                navigator.push(  ()) // agg BottomBarScreen
+                // agg BottomBarScreen
             }) {
                 Text("BottomBarScreen", fontSize = 22.sp, color = Color.White)
             }
