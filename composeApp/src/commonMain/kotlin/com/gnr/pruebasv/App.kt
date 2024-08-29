@@ -36,18 +36,16 @@ class MainScreen : Screen {
         val navigator = LocalNavigator.currentOrThrow
         Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
             Button(onClick = {
-                navigator.push(SecondScreen())
+                navigator.push(  ()) // agg SecondScreen
             }) {
                 Text("SecondScreen", fontSize = 22.sp, color = Color.White)
             }
             Spacer(Modifier.height(16.dp))
             Button(onClick = {
-                navigator.push(BottomBarScreen())
+                navigator.push(  ()) // agg BottomBarScreen
             }) {
                 Text("BottomBarScreen", fontSize = 22.sp, color = Color.White)
-
             }
         }
     }
-
 }
