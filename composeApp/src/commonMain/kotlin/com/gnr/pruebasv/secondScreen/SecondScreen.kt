@@ -28,6 +28,7 @@ class SecondScreen : Screen {
             Spacer(modifier = Modifier.weight(1f))
             Button(onClick = { navigator.pop() }) { Text("Back") }
             Spacer(modifier = Modifier.weight(0.5f))
+
         }
     }
 }
