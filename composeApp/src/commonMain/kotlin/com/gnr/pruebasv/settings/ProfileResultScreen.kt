@@ -2,6 +2,7 @@ package com.gnr.pruebasv.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -17,7 +18,6 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import com.gnr.pruebasv.settings.ProfileScreen.Companion.KEY_NAME
 import com.gnr.pruebasv.settings.ProfileScreen.Companion.KEY_VIP
 import com.russhwolf.settings.Settings
-import pruebasv.composeapp.generated.resources.Res
 
 class ProfileResultScreen : Screen {
 
@@ -42,11 +42,13 @@ class ProfileResultScreen : Screen {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             val name: String = settings.getString(KEY_NAME, "")
+            Spacer(modifier = Modifier.weight(1f))
             Text("Bienvenido $name", fontSize = 22.sp, fontWeight = FontWeight.Bold)
             Button(onClick = {
                 settings.clear()
                 navigator.pop()
             }) { Text("volver y borrar datos") }
+            Spacer(modifier = Modifier.weight(1f))
         }
 
     }
