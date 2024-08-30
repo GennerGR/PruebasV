@@ -15,6 +15,8 @@ compose-plugin = "1.6.11"
 junit = "4.13.2"
 kotlin = "2.0.0"
 voyager = "1.1.0-beta02"
+settings-multiplatform = "1.1.1"
+
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -32,6 +34,8 @@ androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+settings = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "settings-multiplatform"}
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

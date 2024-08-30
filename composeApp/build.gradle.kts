@@ -35,6 +35,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
+            implementation(libs.settings)
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.tabNavigator)
