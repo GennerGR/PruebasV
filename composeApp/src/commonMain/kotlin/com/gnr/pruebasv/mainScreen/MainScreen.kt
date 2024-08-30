@@ -17,6 +17,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.gnr.pruebasv.BottomBar.BottomBarScreen
 import com.gnr.pruebasv.secondScreen.SecondScreen
+import com.gnr.pruebasv.settings.ProfileScreen
 
 
 class MainScreen : Screen {
@@ -27,13 +28,19 @@ class MainScreen : Screen {
             Button(onClick = {
                 navigator.push(SecondScreen()) // agg SecondScreen
             }) {
-                Text("SecondScreen", fontSize = 22.sp, color = Color.White)
+                Text("SecondScreen", fontSize = 16.sp, color = Color.White)
             }
             Spacer(Modifier.height(16.dp))
             Button(onClick = {
                 navigator.push(BottomBarScreen())// agg BottomBarScreen
             }) {
-                Text("BottomBarScreen", fontSize = 22.sp, color = Color.White)
+                Text("BottomBarScreen", fontSize = 16.sp, color = Color.White)
+            }
+            Spacer(Modifier.height(16.dp))
+            Button(onClick = {
+                navigator.push(ProfileScreen())
+            }) {
+                Text("ProfileScreen", fontSize = 16.sp, color = Color.White)
             }
         }
     }
