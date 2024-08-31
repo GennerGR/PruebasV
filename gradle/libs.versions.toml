@@ -16,6 +16,7 @@ junit = "4.13.2"
 kotlin = "2.0.0"
 voyager = "1.1.0-beta02"
 settings-multiplatform = "1.1.1"
+ktor = "2.3.12"
 
 
 [libraries]
@@ -35,7 +36,11 @@ voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.
 voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
 voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
 settings = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "settings-multiplatform"}
-
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = {module = "io.ktor:ktor-client-darwin", version.ref = "ktor"}
+ktor-client-negotiation = {module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor"}
+kotlin-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -43,3 +48,7 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+
+
+
