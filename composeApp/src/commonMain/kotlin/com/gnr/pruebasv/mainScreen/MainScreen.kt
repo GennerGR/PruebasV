@@ -30,17 +30,23 @@ class MainScreen : Screen {
             }) {
                 Text("SecondScreen", fontSize = 16.sp, color = Color.White)
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
             Button(onClick = {
                 navigator.push(BottomBarScreen())// agg BottomBarScreen
             }) {
                 Text("BottomBarScreen", fontSize = 16.sp, color = Color.White)
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
             Button(onClick = {
                 navigator.push(ProfileScreen())
             }) {
                 Text("ProfileScreen", fontSize = 16.sp, color = Color.White)
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(onClick = {
+                navigator.push(ProfileScreen())
+            }){
+                Text("Buscar super heroe")
             }
         }
     }
