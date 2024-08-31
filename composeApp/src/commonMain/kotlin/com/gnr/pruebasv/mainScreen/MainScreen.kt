@@ -16,6 +16,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import com.gnr.pruebasv.BottomBar.BottomBarScreen
+import com.gnr.pruebasv.api.LoadScreen
 import com.gnr.pruebasv.secondScreen.SecondScreen
 import com.gnr.pruebasv.settings.ProfileScreen
 
@@ -44,7 +45,7 @@ class MainScreen : Screen {
             }
             Spacer(modifier = Modifier.height(8.dp))
             Button(onClick = {
-                navigator.push(ProfileScreen())
+                navigator.push(LoadScreen())
             }){
                 Text("Buscar super heroe")
             }
