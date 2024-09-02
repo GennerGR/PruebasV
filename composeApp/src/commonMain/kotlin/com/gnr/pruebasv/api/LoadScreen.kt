@@ -66,16 +66,19 @@ class LoadScreen : Screen {
             }) {
                 Text("Back")
             }
-            Spacer(modifier = Modifier.weight(0.01f))
+            Spacer(modifier = Modifier.weight(0.1f))
         }
     }
 
     private fun getSuperheroList(superheroName: String, onSuccessResponse: (List<Hero>) -> Unit) {
         if (superheroName.isBlank()) return
-        val url = "https://www.superheroapi.com/api.php/41070f7e0f8585ede295035dc984230c/search/"
+        val url = "https://www.superheroapi.com/api.php/41070f7e0f8585ede295035dc984230c/search/$superheroName"
         CoroutineScope(Dispatchers.IO).launch {
             val response = httpClient.get(url).body<ApiResponse>()
             onSuccessResponse(response.results)
         }
     }
 }
+
+
+
