@@ -50,6 +50,5 @@ class ProfileResultScreen : Screen {
             }) { Text("volver y borrar datos") }
             Spacer(modifier = Modifier.weight(1f))
         }
-
     }
 }
